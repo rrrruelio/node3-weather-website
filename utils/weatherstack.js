@@ -21,6 +21,11 @@ const forecast = (lat, long, callback) => {
           msg += ' degrees out. There is a ';
           msg += body.current.precip;
           msg += '% chance of rain.';
+          msg += ' The humidity is ';
+          msg += body.current.humidity;
+          msg += '% and it feels like ';
+          msg += body.current.feelslike;
+          msg += ' degrees outside.';
           callback(undefined, msg);
       };
   });
